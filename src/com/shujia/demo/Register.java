@@ -1,14 +1,23 @@
-package com.shujia.register;
+package com.shujia.demo;
 
 import com.shujia.util.DBUtils;
 import com.shujia.util.LoginUtils;
+import com.shujia.util.MD5Util;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class Demo {
+
+/**
+ * 用户注册，
+ * 插入数据库之前，需要判断用户名是否已经存在
+ *
+ * 需要对密码做一个md5加密
+ *
+ */
+public class Register {
 
 
     public static void main(String[] args) {
@@ -30,8 +39,8 @@ public class Demo {
 
 
         System.out.println("请输入密码：");
-        String password = scanner.next();
-
+        //密码使用MD5加密
+        String password = MD5Util.getMD5( scanner.next());
         String sql = "insert into user (name,password) values('" + username + "','" + password + "')";
         System.out.println(sql);
 
