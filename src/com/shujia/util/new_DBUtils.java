@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * 通过反射加泛型实现的封装
+ *
+ *
+ */
 
 public class new_DBUtils {
 
@@ -22,7 +27,7 @@ public class new_DBUtils {
             //创建Properties对象
             Properties properties = new Properties();
             //通过类加载器加载properties文件
-            properties.load(new FileInputStream("E:\\bigdata\\student_corce\\src\\com\\shujia\\jdbc\\DButils.properties"));
+            properties.load(new FileInputStream("E:\\bigdata\\jdbc-login\\src\\com\\shujia\\util\\DButils.properties"));
             //得到属性
             driver = properties.getProperty("driver");
             url = properties.getProperty("url");

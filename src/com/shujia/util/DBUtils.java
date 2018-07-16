@@ -22,7 +22,7 @@ public class DBUtils {
         Properties properties = new Properties();
         //加载数据
         try {
-            properties.load(new FileInputStream("E:\\bigdata\\student_corce\\src\\com\\shujia\\jdbc\\DButils.properties"));
+            properties.load(new FileInputStream("E:\\bigdata\\jdbc-login\\src\\com\\shujia\\util\\DButils.properties"));
             driver = properties.getProperty("driver");
             url = properties.getProperty("url");
             username = properties.getProperty("username");
